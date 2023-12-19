@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BrokerController;
 use App\Http\Controllers\TaskController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -30,4 +31,5 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::resource('/tasks', TaskController::class);
 });
 
+Route::apiResource('/brokers', BrokerController::class);
 

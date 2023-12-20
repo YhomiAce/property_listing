@@ -14,7 +14,7 @@ class BrokerController extends Controller
      */
     public function index()
     {
-        //
+        return BrokerResource::collection(Broker::all());
     }
 
 

@@ -16,4 +16,9 @@ class Broker extends Model
         'zip_code',
         'logo_path',
     ];
+
+    public function properties()
+    {
+        return $this->hasMany(Property::class);
+    }
 }

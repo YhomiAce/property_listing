@@ -12,4 +12,9 @@ class PropertyCharacteristic extends Model
     protected $fillable = [
         "property_id", "price", "bedrooms", "bathrooms", "sqft", "price_sqft", "property_type", "status"
     ];
+
+    public function property()
+    {
+        return $this->belongsTo(Property::class);
+    }
 }
